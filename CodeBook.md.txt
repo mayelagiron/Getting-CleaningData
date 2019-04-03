@@ -1,0 +1,15 @@
+Introduction
+The script run_analysis.R objetive is to solve the problem which was presented in the course project's definition
+
+The data will be using the rbind() function to merge data (the one having same number of columns and entities). Then it extracts columns with means and std deviations, and rename them properly. 
+
+Then it generates a new dataset with all the average measures for each subject and activity type. 
+
+Output file: averageData.txt
+
+Variables
+Contains data from downloaded file: x_train, y_train, x_test, y_test, subject_train and subject_test
+Merge previous datasets: x_data, y_data and subject_data 
+Corrected feature names from x_data dataset stored in mean_and_std_features
+All_data =  the merge of ... x_data, y_data and subject_data
+averages_data = relevant averages which will be stored in a .txt file. ddply() from the plyr package is used to apply colMeans().
